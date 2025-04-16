@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caribbean Holiday Packages</title>
-    <link rel="stylesheet" href="mycss.css">
+    <!--<link rel="stylesheet" href="mycss.css">-->
     <style>
             /* Reset and Base Styles */
         * {
@@ -181,7 +181,53 @@
             }
         }
 
+    .package-card .img-container{
+        height: 260px;
+    }
 
+    .img-container{
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .package-card .img-wrap{
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .package-card a{
+        text-decoration: none;
+    }
+
+    .center-div {
+        text-align: center;
+    }
+
+    .fw-bold {
+        font-weight: bold;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    button.built-own-trip{
+        background-color: #159fe7;
+        height: 40px;
+        width:180px;
+        border:none;
+        color: white;
+        margin-bottom: 25px;
+    }
+
+    .hidden {display: none}
     </style>
 </head>
 <body>
@@ -205,424 +251,13 @@
                 <button class="built-own-trip fw-bold" onclick="openTab(event)">BUILD MY OWN TRIP</button>
             </div>
             <div id="tab1" class="tab1 hidden" >
-                <div class="tab pl-20px">
-                    <!-- Tab links -->
-                    <button class="tablinks suggested_tours fw-900 active" onclick="openFrame(event, 'suggested_tours')">Suggested Tours</button>
-                    <button class="tablinks create_own_tour fw-900" onclick="openFrame(event, 'create_own_tour')">Create Own Tour</button>
-                </div>
-                <!-- Tab content -->
-                <div id="suggested_tours" class="tabcontent tab-search-content h-100" style="width: 100%; display: block">
-                    <form class="flex-container">
-                        <div class="col-xs-12 col-md-10 relative">
-                            <input type="text" placeholder="What are you looking for?" class="app-filter__search form-control hero-search-package-query__input">
-                            <div role="button" id="advanced-sereach-toggle" class="hero-search-package-query__filter-button absolute" style="cursor: pointer">
-                                <span class="">Advanced Filters</span>
-                                <span class="icon-up "></span>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-2">
-                            <button type="submit" class="btn btn-primary search-button w-100">
-                                Search
-                            </button>
-                        </div>
-                    </form>
-
-                    <div id="advanced-sereach-toggle-content" class="hidden">
-                    <div class="w-100">
-                        <div class="col-xs-12 filters-header-title my-16">Filter your search</div>
-                    </div>
-                    <div class="row">
-                    <div class="col-xs-12 col-md-10">
-                    <div class="w-100 " style="clear: both">
-                    <div class="w-100 h-100 flex-container ">
-                    <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                        <div class="">
-                            <div class="relative">
-                               <span class="app-power-select-multiple-icon  absolute r-15">
-                                   <span>
-                                       <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                           <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                       </svg>
-                                   </span>
-                               </span>
-                                <div id="btn-toggle-1" class="multiselect-trigger border min-h-50 flex-container" style="cursor: pointer">
-                                    <ul id="multiple-options-ul-1" class="multiple-options ">
-                                        <input id="multiple-input-1" class="multiple-input min-h-50 child" style="width: 100%" placeholder="By End Location"/>
-                                    </ul>
-
-                                </div>
-                                <div id="basic-dropdown-1" class="relative hidden">
-                                    <div class="border-top-none basic-dropdown-content
-                                                   basic-dropdown-origin power-select-dropdown
-                                                   bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                        <ul id="advantage-filter-1" role="listbox" >
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                        <div class="">
-                            <div class="relative">
-                               <span class="app-power-select-multiple-icon  absolute r-15">
-                                   <span>
-                                       <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                           <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                       </svg>
-                                   </span>
-                               </span>
-                                <div id="btn-toggle-2" class="multiselect-trigger border min-h-50 flex-container" style="cursor: pointer">
-                                    <ul id="multiple-options-ul-2" class="multiple-options ">
-                                        <input id="multiple-input-2" class="multiple-input min-h-50 child" style="width: 100%" placeholder="By Country"/>
-                                    </ul>
-
-                                </div>
-                                <div id="basic-dropdown-2" class="relative hidden">
-                                    <div class="border-top-none basic-dropdown-content
-                                                   basic-dropdown-origin power-select-dropdown
-                                                   bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                        <ul id="advantage-filter-2" role="listbox" >
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                        <div class="">
-                            <div class="relative itm-middle">
-                                <div id="trip-duration" class="multiselect-trigger border min-h-50 flex-container">
-                                    <div class="advanced-filters-duration-label ps-15">
-                                        Trip duration
-                                    </div>
-                                    <div class="advanced-filters-duration-content">
-                                        <div class="text-right">
-                                            <input min="1" max="365" type="number" placeholder="Min" id="minDuration"
-                                                   class="ww-100 advanced-filters-duration-input">
-                                        </div>
-
-                                        <div class="display-inline">
-                                            <span id="ember15181" class="ember-view">-</span>
-                                        </div>
-
-                                        <div class="text-right">
-                                            <input min="1" max="365" type="number" placeholder="Max" id="maxDuration"
-                                                   class="ww-100 advanced-filters-duration-input">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-                    <!----row 2---->
-                    <div class="w-100 h-100 flex-container mt-15">
-                        <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                            <div class="">
-                                <div class="relative">
-                                   <span class="app-power-select-multiple-icon  absolute r-15">
-                                       <span>
-                                           <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                       </span>
-                                   </span>
-                                    <div id="btn-toggle-3" class="multiselect-trigger border min-h-50 flex-container" style="cursor: pointer">
-                                        <ul id="multiple-options-ul-3" class="multiple-options ">
-                                            <input id="multiple-input-3" class="multiple-input min-h-50 child" style="width: 100%" placeholder="By Trip Type"/>
-                                        </ul>
-
-                                    </div>
-                                    <div id="basic-dropdown-3" class="relative hidden">
-                                        <div class="border-top-none basic-dropdown-content
-                                                       basic-dropdown-origin power-select-dropdown
-                                                       bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                            <ul id="advantage-filter-3" role="listbox" >
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                            <div class="">
-                                <div class="relative">
-                                       <span class="app-power-select-multiple-icon  absolute r-15">
-                                           <span>
-                                               <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                   <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                               </svg>
-                                           </span>
-                                       </span>
-                                    <div id="btn-toggle-4" class="multiselect-trigger border min-h-50 flex-container" style="cursor: pointer">
-                                        <ul id="multiple-options-ul-4" class="multiple-options ">
-                                            <input id="multiple-input-4" class="multiple-input min-h-50 child" style="width: 100%" placeholder="By Theme"/>
-                                        </ul>
-
-                                    </div>
-                                    <div id="basic-dropdown-4" class="relative hidden">
-                                        <div class="border-top-none basic-dropdown-content
-                                                       basic-dropdown-origin power-select-dropdown
-                                                       bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                            <ul id="advantage-filter-4" role="listbox" >
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                            <div class="">
-                                <div class="relative">
-                                   <span class="app-power-select-multiple-icon  absolute r-15">
-                                       <span>
-                                           <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                       </span>
-                                   </span>
-                                    <div id="btn-toggle-5" class="multiselect-trigger border min-h-50 flex-container" style="cursor: pointer">
-                                        <ul id="multiple-options-ul-5" class="multiple-options ">
-                                            <input id="multiple-input-5" class="multiple-input min-h-50 child" style="width: 100%" placeholder="By Tartget Group"/>
-                                        </ul>
-
-                                    </div>
-                                    <div id="basic-dropdown-5" class="relative hidden">
-                                        <div class="border-top-none basic-dropdown-content
-                                                       basic-dropdown-origin power-select-dropdown
-                                                       bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                            <ul id="advantage-filter-5" role="listbox" >
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!----row 3---->
-                    <div class="w-100 h-100 flex-container mt-15">
-                        <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                            <div class="">
-                                <div class="relative">
-                                   <span class="app-power-select-multiple-icon  absolute r-15">
-                                       <span>
-                                           <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                       </span>
-                                   </span>
-                                    <div id="btn-toggle-6" class="multiselect-trigger border min-h-50 flex-container" style="cursor: pointer">
-                                        <ul id="multiple-options-ul-6" class="multiple-options ">
-                                            <input id="multiple-input-6" class="multiple-input min-h-50 child" style="width: 100%" placeholder="By Start Location"/>
-                                        </ul>
-
-                                    </div>
-                                    <div id="basic-dropdown-6" class="relative hidden">
-                                        <div class="border-top-none basic-dropdown-content
-                                                       basic-dropdown-origin power-select-dropdown
-                                                       bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                            <ul id="advantage-filter-6" role="listbox" >
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-10 col-sm-4 col-sm-offset-0 col-md-4 min-h-50">
-                            <div class="">
-                                <div class="relative">
-                                   <span class="app-power-select-multiple-icon  absolute r-15">
-                                       <span>
-                                           <svg class="nz-svg-icon absolute" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                       </span>
-                                   </span>
-                                    <div id="btn-toggle-7" class="multiselect-trigger border min-h-50 flex-container bg-f3f5f6" style="cursor: pointer">
-                                        <ul id="multiple-options-ul-7" class="multiple-options ">
-                                            <input id="multiple-input-7" class="multiple-input min-h-50 child" disabled="true" style="width: 100%" placeholder="By Region"/>
-                                        </ul>
-
-                                    </div>
-                                    <div id="basic-dropdown-7" class="relative hidden">
-                                        <div class="border-top-none basic-dropdown-content
-                                                       basic-dropdown-origin power-select-dropdown
-                                                       bg-white z-10 box-size scroll-y absolute t-1 l-3 ">
-                                            <ul id="advantage-filter-7" role="listbox" >
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--------------->
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-                <div id="create_own_tour" class="tabcontent tab-search-content ">
-                    <div class="itinerary-creation-buttons-action-container pb-16">
-                        <div class="itinerary-creation-buttons-action-container">
-                            <button type="button" data-feature-id="start-with-flights_button_search-flights"
-                                    class="itinerary-creation-btn-rounded btn btn-primary"
-                                    data-ember-action="" data-ember-action-426="426">
-                                Search Flights
-                            </button>
-                            <button type="button" data-feature-id="start-with-flights_button_design-route"
-                                    class="btn btn-link itinerary-creation-btn-ghost"
-                                    data-ember-action="" data-ember-action-427="427">
-                                Design Route
-                            </button>
-                            <button type="button" data-feature-id="start-with-flights_button_import-pnr"
-                                    class="btn btn-link itinerary-creation-btn-ghost"
-                                    data-ember-action="" data-ember-action-428="428">
-                                Import PNR
-                            </button>
-                            <button type="button" data-feature-id="discovery_planner-copilot_tab"
-                                    class="btn btn-link itinerary-creation-btn-ghost"
-                                    data-ember-action="" data-ember-action-431="431">
-                        <span id="ember434" class="ember-view">
-                        </span> Create with AI
-                            </button>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="w-100 flex-container" id="start-with-flights-button-search-flights-content">
-                            <div class="flight-type-dropdown pe-15">
-                                <div class="transport-dropdown open">
-                                    <div role="button" data-toggle="dropdown" data-feature-id="start-with-flights_search-flights_flight-type"
-                                       class="dropdown-toggle dropdown-toggle__link" aria-expanded="false">
-                                        <span class="text-link" data-selected-index="0">Roundtrip</span>
-                                        <span class="absolute t-6">
-                                           <svg class="nz-svg-icon absolute" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="flight-type-dropdown pe-15">
-                                <div class="transport-dropdown open">
-                                    <div role="button" data-toggle="dropdown"
-                                       class="dropdown-toggle dropdown-toggle__link" >
-                                        <span class="text-linkme-5" >Select traveller details</span>
-                                        <span class="absolute t-6">
-                                           <svg class="nz-svg-icon absolute" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="flight-type-dropdown pe-15">
-                                <div class="transport-dropdown open">
-                                    <div role="button"
-                                         class="dropdown-toggle dropdown-toggle__link" >
-                                        <span class="text-linkme-5" >Economy</span>
-                                        <span class="absolute t-6">
-                                           <svg class="nz-svg-icon absolute" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="flight-type-dropdown pe-15">
-                                <div class="transport-dropdown">
-                                    <div class="child-box" >
-                                        <span class="text-linkme-5" ><Input class="box-16" type="checkbox"/></span>
-                                        <span class="dropdown-toggle__link w-100px t--2 relative ">
-                                           Hold Baggage
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="flight-type-dropdown pe-15">
-                                <div class="transport-dropdown open">
-                                    <div role="button"
-                                         class="dropdown-toggle dropdown-toggle__link" >
-                                        <span class="text-linkme-5" >Carrie</span>
-                                        <span class="absolute t-6">
-                                           <svg class="nz-svg-icon absolute" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                               <polyline points="8,16 12,12 16,16" fill="none" stroke="black" stroke-width="1" transform="rotate(-180 12 12)" />
-                                           </svg>
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="flight-type-dropdown pe-15">
-                                <div class="transport-dropdown">
-                                    <div class="child-box" >
-                                        <span class="text-linkme-5" ><Input class="box-16" type="checkbox"/></span>
-                                        <span class="dropdown-toggle__link w-100px t--2 relative ">
-                                           No-top flight
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row flex-container">
-                        <div class="col-md-10 col-xs-12">
-                            <div class="row flex-container">
-                                <div class="col-xs-12 col-md-7 flex-container itm-middle">
-                                    <div class="w-100 bg-white border-6 h-50 flex-container" style="cursor: pointer">
-                                        <div class="w-50 ps-15" style="cursor: pointer">From</div>|
-                                        <div class="w-50 ps-15" style="cursor: pointer">To</div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-5 flex-container itm-middle">
-                                    <div class="w-100 bg-white border-6 h-50 flex-container" style="cursor: pointer">
-                                        <div class="w-50 relative">
-                                            <input type="text" placeholder="Arrival date at destination"
-                                                   class="absolute z-ind-1 h-50 border-none bordertop-buttom-left-6 bor t--12 border-focus-left" />
-                                           <input class="w-100  horizon-right" type="date" id="departure-date" name="departure-date" placeholder="">
-                                        </div>|
-                                        <div class="w-50 relative">
-                                            <input class="w-100 horizon-right" type="date" id="destinate-date" name="destinate-date" placeholder="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-2">
-                            <button type="submit" class="btn btn-primary search-button w-100">
-                                Search
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <iframe
+                        src="https://ibe.caribbeantravelandtours.com/travel/create-itinerary"
+                        width="100%"
+                        height="800"
+                        frameborder="0"
+                        style="border: none;">
+                </iframe>
             </div>
         </section>
 
@@ -632,36 +267,36 @@
             <div class="packages-grid">
                 <!-- Package 1 -->
                 <div class="package-card">
-                    <a href="https://www.caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fanguilla-10-nights-escape" >
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fsaint-lucia-10-nights-escape" >
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Anguilla10NightsEscape2.jpg" alt="Antigua Escape" class="package-image">
+                                <img src="./image/Saint-Lucia-10-Nights-Escape1.jpg" alt="Antigua Escape" class="package-image">
                             </div>
                         </div>
 
                         <div class="package-info">
-                            <h3 class="package-title">Antigua All-Inclusive Escape</h3>
+                            <h3 class="package-title">Saint Lucia 10 Nights Escape</h3>
                             <p class="package-price">From $1,299</p>
-                            <p class="package-duration">5 Nights</p>
-                            <p>Luxury all-inclusive resort with private beach</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>A Tropical Paradise Experience</p>
                         </div>
                    </a>
                 </div>
 
                 <!-- Package 2 -->
                 <div class="package-card">
-                    <a href="https://www.caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fthe-bahamas-10-nights-escape">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fjamaica-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/The-Bahamas-10-Nights-Escape-2.jpg" alt="Bahamas Adventure" class="package-image">
+                                <img src="./image/JamaicaWeekendGetaway1.jpg" alt="Bahamas Adventure" class="package-image">
                             </div>
                         </div>
 
                         <div class="package-info">
-                            <h3 class="package-title">Bahamas Island Hopping</h3>
+                            <h3 class="package-title">Jamaica Weekend Getaway</h3>
                             <p class="package-price">From $1,599</p>
-                            <p class="package-duration">7 Nights</p>
-                            <p>Explore Nassau, Exumas, and Paradise Island</p>
+                            <p class="package-duration">4 Nights</p>
+                            <p>3 Nights of Rhythm and Relaxation</p>
                         </div>
                     </a>
                 </div>
@@ -671,72 +306,1193 @@
                     <a>
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/FallIntoJamaicaWhyNot-2.jpg" alt="Jamaica Retreat" class="package-image">
+                                <img src="./image/AnguillaCulinaryExperience.jpg" alt="Jamaica Retreat" class="package-image">
                             </div>
                         </div>
 
                         <div class="package-info">
-                            <h3 class="package-title">Jamaica Luxury Retreat</h3>
+                            <h3 class="package-title">Anguilla Culinary Experience</h3>
                             <p class="package-price">From $1,799</p>
-                            <p class="package-duration">6 Nights</p>
-                            <p>5-star resort in Montego Bay with spa credits</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Delight in four days of world-class cuisine, as chefs unite to showcase Anguilla's culinary prowess.</p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Package 4 -->
                 <div class="package-card">
-                    <a href="https://www.caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-lucia-carnival-2025">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fanguilla-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/St-LuciaCarnival2025-2.jpg" alt="St. Lucia Romance" class="package-image">
+                                <img src="./image/Anguilla-Weekend-Getaway.jpg" alt="St. Lucia Romance" class="package-image">
                             </div>
                         </div>
 
                         <div class="package-info">
-                            <h3 class="package-title">St. Lucia Romantic Getaway</h3>
+                            <h3 class="package-title">Anguilla Weekend Getaway</h3>
                             <p class="package-price">From $2,199</p>
-                            <p class="package-duration">5 Nights</p>
-                            <p>Private villa with butler service and sunset cruise</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Three Nights of Relaxation and Luxury</p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Package 5 -->
                 <div class="package-card">
-                    <a href="https://www.caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fspring-sale-for-the-beach">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdominica-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/FallfortheBeaciBarbados-2.jpg" alt="Barbados Golf" class="package-image">
+                                <img src="./image/Dominica10NightsEscape.jpg" alt="Barbados Golf" class="package-image">
                             </div>
                         </div>
 
                         <div class="package-info">
-                            <h3 class="package-title">Barbados Golf Paradise</h3>
+                            <h3 class="package-title">Dominica 10 Nights Escape</h3>
                             <p class="package-price">From $1,899</p>
-                            <p class="package-duration">6 Nights</p>
-                            <p>Stay & play at top-rated golf resorts</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>An Adventurous Retreat</p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Package 6 -->
                 <div class="package-card">
-                    <a href="https://www.caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-10-nights-escape">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fbarbados-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Grenada10NightsEscape-2.jpg" alt="Grenada Spice" class="package-image">
+                                <img src="./image/BarbadosWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
                             </div>
                         </div>
 
                         <div class="package-info">
-                            <h3 class="package-title">Grenada Spice Island Experience</h3>
+                            <h3 class="package-title">Barbados Weekend Getaway</h3>
                             <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Nights</p>
-                            <p>Beachfront resort with spice plantation tour</p>
+                            <p class="package-duration">5 Days</p>
+                            <p>3 Nights of Bliss and Adventure</p>
                         </div>
                     </a>
                 </div>
+
+                <!-- Package 7 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2F-10-day-escape-raleigh-are-you-ready-for-take-off-">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/10-DayEscape-RaleighAreYouReadyforTake-Off.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">10-Day Escape - Raleigh! Are You Ready for Take-Off!</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">9 - 14 Days</p>
+                            <p>Starting from Dec. 10, 2023, round-trip airfares to Freeport start as low as $375 per person, and Air + Hotel all-incl.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 8 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fanguilla-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Anguilla10NightsEscape.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Anguilla 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>The Ultimate Caribbean Experience</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 9 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fsaint-vincent-and-the-grenadines-digital-nomad-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintVincentandtheGrenadinesDigitalNomadEscape.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Vincent and the Grenadines Digital Nomad Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p>Saint Vincent and the Grenadines</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 10 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fantigua-and-barbuda-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/AntiguaandBarbudaWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Antigua and Barbuda Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Three Nights of Tropical Bliss</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package  11 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/GrenadaWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Grenada Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>3 Nights of Tranquility and Charm</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 12 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcuracao-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Curacao10NightsEscape.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Curacao 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Ultimate Caribbean Adventure</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 13 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fthe-bahamas-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/TheBahamasWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">The Bahamas Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>3 Nights of Tropical Paradise</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 14 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2F">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/anguilla-luxury-cultural-tour.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Anguilla  Luxury Cultural Tour</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 15 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fmontserrat-digital-nomad-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/MontserratDigitalNomadEscape.jpg" alt="Grenada Spice" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Montserrat Digital Nomad Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 Days</p>
+                            <p>Rediscover tranquility and inspiration in the unspoiled beauty of Montserrat.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 16 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-and-nevis-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintKittsandNevisWeekendGetaway.jpg" alt="Saint Kitts and Nevis" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Kitts and Nevis Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p>3 Nights of Island Charm</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 17 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fbarbados-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Barbados10NightsEscape.jpg" alt="Barbados" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Barbados 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>Ultimate Caribbean Adventure</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 18 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcruising-5-city-road-trip-jamaica-group-tour">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Cruising-5CityRoadTripJamaicaTour.jpg" alt="Jamaica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Cruising- 5 City Road Trip Jamaica Tour!</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">7 - 12 Days</p>
+                            <p>Hit the road in Jamaica. </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 19 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-lucian-national-day-festival-of-lights">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintLucianNationalDayFestivalofLights.jpg" alt="Saint Lucian" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Lucian National Day Festival of Lights</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 8 Days</p>
+                            <p>Illuminate Your Spirit at Saint Lucian National Day Festival of Lights.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 20 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fsaint-lucia-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintLuciaWeekendGetaway.jpg" alt="Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Lucia Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>3 Nights of Romance and Adventure</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 21 -->
+                <div class="package-card">
+                    <a href="https://ibe.caribbeantravelandtours.com/travel/routes/the-bahamas-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/TheBahamas10NightsEscape.jpg" alt="Jamaica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">The Bahamas 10 Nights Escape!</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">7 - 12 Days</p>
+                            <p>Hit the road in Jamaica. </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 22 -->
+                <div class="package-card">
+                    <a href="Anguilla">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/AnguillaDigitalNomadEscape.jpg" alt="Anguilla" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Anguilla Digital Nomad Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 Days</p>
+                            <p>Work and unwind in the sophisticated charm of Anguilla's pristine beaches and luxury escapes.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 23 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fa-day-in-saint-vincent">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/ADAYINSAINTVINCENT.jpg" alt="VINCENT" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">A DAY IN SAINT VINCENT</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p>Spend a casual day exploring the Island in the comfort of air-condition with your own personal driver/guide</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 24 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-lucia-carnival-2025">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/StLuciaCarnival2025.jpg" alt="Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">St. Lucia Carnival 2025</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p> A lively festival filled with music, vibrant costumes, and contagious energy.
+
+
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 25 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-music-festival-1">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/StKittsMusicFestival.jpg" alt="Festival" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">St. Kitts Music Festival</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p>Summer sounds better in St. Kitts, an-unforgettable fusion of music, energy and pure island vibe!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 26 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdominica-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/DominicaWeekendGetaway.jpg" alt="Dominica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Dominica Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration"> Days</p>
+                            <p>3 Nights of Nature and Serenity</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 27 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-and-nevis-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintKittsandNevis10NightsEscape.jpg" alt="Saint Kitts" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Kitts and Nevis 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>A Luxurious Island Adventure</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 28 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fspecial-offer-jamaica">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/FallIntoJamaicaWhyNot.jpg" alt="Jamaica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Fall Into Jamaica? Why Not!</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 10 Days</p>
+                            <p>Come into relaxed action in Montego Bay </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 29 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcropover-2025">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Cropover2025.jpg" alt="Cropover" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Cropover 2025</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 Days</p>
+                            <p>A vibrant explosion of music, colour and dance</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 30 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcuracao-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/CuracaoWeekendGetaway.jpg" alt="Curacao" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Curacao Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>3 Nights of Sun and Fun</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 31 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdominica-cultural-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/DominicaCulturalGetaway.jpg" alt="Dominica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Dominica Cultural Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">2 - 8 Days</p>
+                            <p>3 Nights of Heritage and Natural Wonders</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 32 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwhat-are-you-waiting-for-ladera-awaits-you-">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/WhatAreYouWaitingFor-LaderaAwaitsYou.jpg" alt="Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">What Are You Waiting For - Ladera Awaits You!</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Ladera Resort - Rust, luxurious, calming</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 33 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fjamaica-sumfest">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/JamaicaSumfest.jpg" alt="Jamaica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Jamaica Sumfest</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Iconic Music Festival with unforgettable performances</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 34 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-carriacou-petit-martinique-3-islands-in-one-spicy-destination">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/GrenadaCarriacouPetitMartinique3IslandsinOneSpicyDestination.jpg" alt="Grenada" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Grenada, Carriacou, Petit Martinique - 3 Islands in One Spicy Destination</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 35 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-vincent-and-the-grenadines-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintVincentandtheGrenadines10NightsEscape.jpg" alt="Saint Vincent " class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Vincent and the Grenadines 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>Ultimate Caribbean Experience</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 36 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fa-visit-to-the-isle-of-spice">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/AVisittoTheIsleofSpice.jpg" alt="grenada" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">A Visit to The Isle of Spice</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Visit the Tri-Island State of Grenada the Spice of the Caribbean!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 37 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fvacation-package-in-barbados">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/VillaVacationInBarbadosWestCoast.jpg" alt="Barbados" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Villa Vacation In Barbados (West Coast)</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 10 Days</p>
+                            <p>A special place with many stories... Barbados is home to superstar Rihanna and famous cricketer Garfield Sobers.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 38 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcuracao-north-sea-jazz-festival">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/CuracaoNorthSeaJazzFestivalAug27-Aug302025.jpg" alt="Curacao" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Curacao North Sea Jazz Festival Aug. 27 - Aug. 30, 2025</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 8 Days</p>
+                            <p>Immerse in the Rhythms at the Curacao North Sea Jazz Festival</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 39 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fhoneymoon-in-the-caribbean">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/HoneymooninTheCaribbean.jpg" alt="Sint Maarten" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Honeymoon in The Caribbean</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 40 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fadventure-in-the-valley">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/AdventureinTheValley.jpg" alt="Dominica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Adventure in The Valley</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 8 Days</p>
+                            <p>A vacation with nature in Dominica.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 41 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fjamaica-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Jamaica10NightsEscape.jpg" alt="Jamaica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Jamaica 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>Ultimate Caribbean Adventure</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 42 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-vincent-and-the-grenadines-weekend-getaway">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintVincentandtheGrenadinesWeekendGetaway.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Vincent and the Grenadines Weekend Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>3 Nights of Island Serenity</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 43 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Flets-go-to-barbados">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/LetsgotoBarbados.jpg" alt="Barbados" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Lets go to Barbados</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 8 Days</p>
+                            <p>Have Fun in the bajan sun</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 44 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcome-to-marleys-jamaica">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/COMETOMARLEYSJAMAICA.jpg" alt="JAMAICA" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">COME TO MARLEY'S JAMAICA</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Visit the homeland of the legendary Bob Marley</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 45 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2F2023-barbados-beach-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/BarbadosBeachFallGetaway.jpg" alt="Barbados" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Barbados Beach Fall Getaway</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 Days</p>
+                            <p>Sun, Beach, fun, Cruise</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 46 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwinter-thaw-out-windjammer-landings-special-uk-offers">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/WinterThawWindjammerLandings.jpg" alt="Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Winter Thaw @ Windjammer Landings</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">6 - 12 Days</p>
+                            <p>Winter holiday on the beach. </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 47 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fmass-and-fun-the-vincy-way">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/MassandfuntheVincyWay.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Mass and fun the Vincy Way</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 6 Days</p>
+                            <p>
+                                Celebrate Culture, Celebrate Life – Vincy Mas 2025! from sunrise to sunset it's non-stop vibes</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 48 -->
+                <div class="package-card">
+                    <a href="https://https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fexperience-dominica">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/ExperienceDominica.jpg" alt="Dominica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Experience Dominica</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 9 Days</p>
+                            <p>"Lose your Cares. Feed Your Soul"</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 49 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fenjoy-variety-living-in-jamaica">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/EnjoyJamaicanLivingNegril.jpg" alt="Jamaica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Enjoy Jamaican Living (Negril)</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 10 Days</p>
+                            <p>Visit Jamaica - The Bold and the Beautiful</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 50 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fresort-life-amid-the-mangroves">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/ResortLifeAmidtheMangroves.jpg" alt="Curacao" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Resort Life Amid the Mangroves</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration"> Days</p>
+                            <p>Curacao says "Amazing awaits you"!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 51 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwindjammer-in-the-breeze-code-ebb2023">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/WindjammerintheBreeze.jpg" alt="Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Windjammer in the Breeze</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 9 Days</p>
+                            <p>A relaxed All Inclusive resort that overlooks the Caribbean Sea from the hilltop. </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 52 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdoing-nothing-next-week-come-to-barbados-then-">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/DoingnothingnextweekCometoBarbadosthen.jpg" alt="Barbados" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Doing nothing next week?  Come to Barbados then!</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">Days</p>
+                            <p>Do more in Barbados, take a  break for a little fun in the sun</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 53 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fspring-sale-for-the-beach">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/FallfortheBeachinBarbados.jpg" alt="Barbados" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Fall for the Beach in Barbados</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 8 Days</p>
+                            <p>Barbados at its best</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 54 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fmy-three-island-vacation">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/MyThreeIslandVacation.jpg" alt="Saint Kitts and Nevis, Dominica, Sint Maarten, Anguilla" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">My Three Island Vacation</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">10 - 14 Days</p>
+                            <p>Experience Caribbean Charm and beauty</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 55 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-10-nights-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Grenada10NightsEscape.jpg" alt="Grenada" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Grenada 10 Nights Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 11 Days</p>
+                            <p>Ultimate Caribbean Experience - three unique Islands; one destination</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 56 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwellness-culinary-combo-in-the-islands">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/WellnessCulinaryIslandHopperAntiguaSaintKittsNevis.jpg" alt="Antigua and Barbuda, Saint Kitts and Nevis" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Wellness & Culinary Island Hopper - Antigua | Saint Kitts & Nevis</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 15 Days</p>
+                            <p>Two Islands - two themes:  Wellness and Cuisine</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 57 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fparadise-retreat-in-the-grenadines">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/DiscoverSaintVincent.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Discover Saint Vincent</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 7 Days</p>
+                            <p>A brief escape to the untouched gem of the Caribbean.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 58 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fromance-in-aruba">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/RomanceinAruba.jpg" alt="Aruba" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Romance in Aruba</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">5 - 8 Days</p>
+                            <p>Intimate Adults Only Getaway.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 59 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fescape-to-dominica-st-kitts-on-a-wellness-jaunt">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/DominicaandSaintKittsWellnessEscape.jpg" alt="Dominica, Saint Kitts and Nevis" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Dominica and Saint Kitts Wellness Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">4 - 15 Days</p>
+                            <p>Put Wellness first and enjoy nature at its best.  Spend time in an artist's haven in the rainforest.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 60 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-and-nevis-escape-to-wellbeing">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/SaintKittsandNevisWellnessEscape.jpg" alt="Saint Kitts and Nevis, Dominica" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Saint Kitts and Nevis Wellness Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 12 Days</p>
+                            <p>Wellness Escape in St. Kitts and Nevis.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 61 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Frum-and-dine-vincy-style">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/Rum&FoodtheVincyWay.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Rum & Food the Vincy Way</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 10 Days</p>
+                            <p>Real Rum and Vincy Food</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 62 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fparadise-tours">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/ParadiseTours.jpg" alt="Saint Lucia, Saint Kitts and Nevis, Anguilla" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Paradise Tours</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">Days</p>
+                            <p>Three Islands, one Amazing vacation</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 63 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Ftrial-antigua-and-st-lucia-culinary-escape-1">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/AntiguaandSaintLuciaCulinaryEscape.jpg" alt="Antigua and Barbuda, Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Antigua and Saint Lucia Culinary Escape</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 12 Days</p>
+                            <p>Explore and experience the culinary delights of Antigua and St. Lucia.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 64 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fvacation-package-to-st-lucia">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/ThreeIslandsUnveiledStLuciaSintMaartenAnguilla.jpg" alt="Saint Lucia, Sint Maarten, Anguilla, United Kingdom" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Three Islands Unveiled: St. Lucia / Sint Maarten / Anguilla</h3>
+                            <p class="package-price">From $830</p>
+                            <p class="package-duration">1 - 21 Days</p>
+                            <p>Discover paradise not once but three times - St. Lucia / Sint Maarten / Anguilla</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 65 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-st-lucia-culinary-delight">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/GrenadaandStLuciaCulinaryEscape.jpg" alt="Grenada, Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Grenada and St. Lucia Culinary Escape             </h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">2 - 16 Days</p>
+                            <p>Explore the culinary delights of two unique islands in one vacation! </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 66 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-antigua-culinary-escape">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/GrenadaandAntiguaCulinaryEscape.jpg" alt="Grenada, Antigua and Barbuda" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Grenada and Antigua Culinary Escape       </h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 15 Days</p>
+                            <p>Culinary Escape to the Eastern Caribbean!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 67 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fexplore-saint-vincent-the-grenadines">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/ExploreSaintVincentTheGrenadines.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Explore Saint Vincent & The Grenadines</h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">3 - 15 Days</p>
+                            <p>Multi-Destination vacation in a single archipelago, that is Saint Vincent & The  Grenadines.  </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Package 68 -->
+                <div class="package-card">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fultimate-twin-island-adventure-saint-vincent-saint-lucia">
+                        <div class="img-container">
+                            <div class="img-wrap">
+                                <img src="./image/UltimateTwinIslandAdventureSaintVincentSaintLucia.jpg" alt="Saint Vincent and the Grenadines, Saint Lucia" class="package-image">
+                            </div>
+                        </div>
+
+                        <div class="package-info">
+                            <h3 class="package-title">Ultimate Twin Island Adventure - Saint Vincent & Saint Lucia </h3>
+                            <p class="package-price">From $1,499</p>
+                            <p class="package-duration">Days</p>
+                            <p>Island hop between two islands with peaks in common </p>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -746,56 +1502,62 @@
                 <div class="destination-category">
                     <h3 class="category-title">Popular Islands</h3>
                     <ul class="destination-list">
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/?nz-url=%2Ftravel%2Fcreate-itinerary">Bahamas</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/">Jamaica</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/?nz-url=%2Ftravel%2Fcreate-itinerary">Aruba</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/barbados/?nz-url=%2Ftravel%2Fcreate-itinerary">Barbados</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/british-virgin-islands/?nz-url=%2Ftravel%2Fcreate-itinerary">Cayman Islands</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/saint-lucia/?nz-url=%2Ftravel%2Fcreate-itinerary">St. Lucia</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/antigua-and-barbuda/?nz-url=%2Ftravel%2Fcreate-itinerary">Antigua</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/turks-caicos/">Turks & Caicos</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/overview-15">Overview</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/top-towns-9">Top Towns</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/best-time-travel-caribbean">Best Time to Travel to the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/visa-caribbean">Visa to the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/before-you-travel-caribbean">Before You Travel to the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/weather-caribbean">Weather in the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/travel-tips-and-advice-travelling-caribbean">Travel Tips and Advice for Travelling to the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/things-see-caribbean">Things to See in the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/places-visit-caribbean">Places to Visit in the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/things-do-caribbean">Things to do in the Caribbean</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/what-eat-caribbean-food">What to Eat (Caribbean Food)</a></li>
                     </ul>
                 </div>
 
                 <div class="destination-category">
                     <h3 class="category-title">Luxury Resorts</h3>
                     <ul class="destination-list">
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/things-see-jamaica?nz-url=%2Ftravel%2Fcreate-itinerary">Sandals Resorts</a></li>
-                        <li><a href="https://www.beaches.com/">Beaches Resorts</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/index.php/travel/islands/st-kitts-and-nevis/things-see-saint-kitts-nevis?nz-url=%2Ftravel%2Fcreate-itinerary">Four Seasons</a></li>
-                        <li><a href="https://www.ritzcarlton.com/">Ritz-Carlton</a></li>
-                        <li><a href="https://www.aman.com/">Aman Resorts</a></li>
-                        <li><a href="https://www.rosewoodhotels.com/en/default">Rosewood Hotels</a></li>
-                        <li><a href="https://www.belmond.com/">Belmond</a></li>
-                        <li><a href="https://eleganthotelcollection.com/">Elegant Hotels</a></li>
+                        <li><a href="#">Sandals Resorts</a></li>
+                        <li><a href="#">Beaches Resorts</a></li>
+                        <li><a href="#">Four Seasons</a></li>
+                        <li><a href="#">Ritz-Carlton</a></li>
+                        <li><a href="#">Aman Resorts</a></li>
+                        <li><a href="#">Rosewood Hotels</a></li>
+                        <li><a href="#">Belmond</a></li>
+                        <li><a href="#">Elegant Hotels</a></li>
+
                     </ul>
                 </div>
 
                 <div class="destination-category">
                     <h3 class="category-title">Adventure Travel</h3>
                     <ul class="destination-list">
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/anguilla/things-do-anguilla?nz-url=%2Ftravel%2Fcreate-itinerary">Scuba Diving</a></li>
-                        <li><a href="https://ibe.caribbeantravelandtours.com/travel/activities-and-tours/deep-sea-fishing-st-lucia">Deep Sea Fishing</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/saint-lucia/things-do-saint-lucia?nz-url=%2Ftravel%2Fcreate-itinerary">Rainforest Hiking</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/montserrat/things-see-montserrat?nz-url=%2Ftravel%2Fcreate-itinerary">Volcano Tours</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/hotels-and-resorts/st-lucia-10-night-escape/st-lucia-10-nights-escape?nz-url=%2Ftravel%2Fcreate-itinerary">Sailing Charters</a></li>
-                        <li><a href="https://ibe.caribbeantravelandtours.com/travel/activities-and-tours/whale-watching-st-lucia?utm_source=chatgpt.com">Whale Watching</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/saint-lucia/things-do-saint-lucia?nz-url=%2Ftravel%2Fcreate-itinerary">Ziplining</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/curacao/things-do-curacao?nz-url=%2Ftravel%2Fcreate-itinerary">Cave Exploration</a></li>
+                        <li><a href="#">Scuba Diving</a></li>
+                        <li><a href="#">Deep Sea Fishing</a></li>
+                        <li><a href="#">Rainforest Hiking</a></li>
+                        <li><a href="#">Volcano Tours</a></li>
+                        <li><a href="#">Sailing Charters</a></li>
+                        <li><a href="#">Whale Watching</a></li>
+                        <li><a href="#">Ziplining</a></li>
+                        <li><a href="#">Cave Exploration</a></li>
+
                     </ul>
                 </div>
 
                 <div class="destination-category">
                     <h3 class="category-title">Cruise Destinations</h3>
                     <ul class="destination-list">
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands/anguilla/overview-16?nz-url=%2Ftravel%2Fcreate-itinerary">Eastern Caribbean</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/islands">Western Caribbean</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/index.php/travel/islands/barbados/places-visit-barbados?nz-url=%2Ftravel%2Fcreate-itinerary">Southern Caribbean</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/index.php/travel/islands/bahamas/overview-11?nz-url=%2Ftravel%2Fcreate-itinerary">Bahamas Cruises</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/travel/hotels-and-resorts/st-lucia-10-night-escape/st-lucia-10-nights-escape?nz-url=%2Ftravel%2Fcreate-itinerary">Private Yacht Charters</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/services">Luxury Cruises</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/index.php/travel/hotels-and-resorts/family-fun-sun/family-fun-sun?nz-url=%2Ftravel%2Fcreate-itinerary">Family Cruises</a></li>
-                        <li><a href="https://caribbeantravelandtours.com/services">Adventure Cruises</a></li>
+                        <li><a href="#">Eastern Caribbean</a></li>
+                        <li><a href="#">Western Caribbean</a></li>
+                        <li><a href="#">Southern Caribbean</a></li>
+                        <li><a href="#">Bahamas Cruises</a></li>
+                        <li><a href="#">Private Yacht Charters</a></li>
+                        <li><a href="#">Luxury Cruises</a></li>
+                        <li><a href="#">Family Cruises</a></li>
+                        <li><a href="#">Adventure Cruises</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -830,236 +1592,10 @@
 
         function openTab(evt){
             document.getElementById("tab1").classList.toggle("hidden");
-           // document.getElementById("tab1").style.display= "block"
-//            document.getElementById("suggested_tours").style.display= "block"
-//            document.getElementById("create_own_tour").style.display= "none"
-//
-//            const suggested_tours = document.getElementsByClassName("suggested_tours")
-//            suggested_tours[0].classList.add("active")
-//            const create_own_tour = document.getElementsByClassName("create_own_tour")
-//            create_own_tour[0].classList.remove("active")
+
         }
 
-        //advanced-sereach-toggle
-        document.getElementById("advanced-sereach-toggle").addEventListener("click", function () {
-            document.getElementById("advanced-sereach-toggle-content").classList.toggle("hidden");
-        });
 
-        /////////DOMContentLoaded
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdownConfigs = [
-                {
-                    listboxId: "advantage-filter-1",
-                    ulId: "multiple-options-ul-1",
-                    inputId: "multiple-input-1",
-                    dropdownId: "basic-dropdown-1",
-                    toggleId: "btn-toggle-1",
-                    useShortText: false,
-                    list: [
-                        { data_option_index: 0, name: "ANU - V C Bird Intl Airport - Antigua" },
-                        { data_option_index: 1, name: "AUA - Reina Beatrix Intl Airport - Oranjestad" },
-                        { data_option_index: 2, name: "AXA - Wallblake Airport - The Valley" },
-                        { data_option_index: 3, name: "Antigua, Antigua and Barbuda, AG"},
-                        { data_option_index: 4, name: "Argyle International Airport" },
-                        { data_option_index: 5, name: "BGI - Grantley Adams Intl Airport - Bridgetown"},
-                        { data_option_index: 6, name: "Barbados, BB" },
-                    ]
-                },
-                {
-                    listboxId: "advantage-filter-2",
-                    ulId: "multiple-options-ul-2",
-                    inputId: "multiple-input-2",
-                    dropdownId: "basic-dropdown-2",
-                    toggleId: "btn-toggle-2",
-                    useShortText: false,
-                    list: [
-                        { data_option_index: 0, name: "Spa & Wellness" },
-                        { data_option_index: 1, name: "Culture & History" },
-                        { data_option_index: 2, name: "Art" },
-                        { data_option_index: 3, name: "Cuisine" },
-                        { data_option_index: 4, name: "Sun & Beach"  },
-                        { data_option_index: 5, name: "Island Hopping" },
-                        { data_option_index: 6, name: "Photography"  },
-                    ]
-                },
-                {
-                    listboxId: "advantage-filter-3",
-                    ulId: "multiple-options-ul-3",
-                    inputId: "multiple-input-3",
-                    dropdownId: "basic-dropdown-3",
-                    toggleId: "btn-toggle-3",
-                    useShortText: false,
-                    list: [
-                        { data_option_index: 0, name: "Self-Drive" },
-                        { data_option_index: 1, name: "Rental Car" },
-                        { data_option_index: 2, name: "Individual Tour" },
-                        { data_option_index: 3, name: "Group Tour" },
-                        { data_option_index: 4, name: "City Tour" },
-                        { data_option_index: 5, name: "Sailing" },
-                        { data_option_index: 6, name: "Fully-Guided" },
-                        { data_option_index: 7, name: "Semi-Guided" },
-                        { data_option_index: 8, name: "Private Guide / Driver-Guide" }
-                    ]
-                },
-                {
-                    listboxId: "advantage-filter-4",
-                    ulId: "multiple-options-ul-4",
-                    inputId: "multiple-input-4",
-                    dropdownId: "basic-dropdown-4",
-                    toggleId: "btn-toggle-4",
-                    useShortText: false,
-                    list: [
-                        { data_option_index: 0, name: "Spa & Wellness" },
-                        { data_option_index: 1, name: "Culture & History" },
-                        { data_option_index: 2, name: "Art"  },
-                        { data_option_index: 3, name: "Cuisine"  },
-                        { data_option_index: 4, name:  "Sun & Beach" },
-                        { data_option_index: 5, name: "Island Hopping"  },
-                        { data_option_index: 6, name: "Photography"  },
-                        { data_option_index: 7, name: "Nature and Wildlife"  },
-                        { data_option_index: 8, name: "Classes"  },
-                        { data_option_index: 9, name: "Sustainable Travel" },
-                        { data_option_index: 10, name: "Aerial Tours" },
-                        { data_option_index: 11, name: "Boat Tours" },
-                        { data_option_index: 12, name: "Transportation" },
-                        { data_option_index: 13, name: "Landscapes & Sceneries" },
-                        { data_option_index: 14, name: "Day Trips & Excursions" },
-                        { data_option_index: 15, name: "VIP & Exclusive" },
-                        { data_option_index: 16, name: "Adventure" },
-                        { data_option_index: 17, name: "Golf" },
-                        { data_option_index: 18, name: "Hiking & Walking" },
-                        { data_option_index: 19, name: "Festival" },
-                        { data_option_index: 20, name: "Multi-Country" },
-                        { data_option_index: 21, name: "Cycling & Mountain Biking" },
-                        { data_option_index: 22, name: "Christmas & New Year" },
-                        { data_option_index: 23, name: "Luxury" },
-                        { data_option_index: 24, name: "Events & Tickets" },
-                        { data_option_index: 25, name: "Outdoor Activities and Sports" },
-                        { data_option_index: 26, name: "City Life" }
-                    ]
-                },
-                {
-                    listboxId: "advantage-filter-5",
-                    ulId: "multiple-options-ul-5",
-                    inputId: "multiple-input-5",
-                    dropdownId: "basic-dropdown-5",
-                    toggleId: "btn-toggle-5",
-                    useShortText: false,
-                    list: [
-                        { data_option_index: 0, name: "Seniors" },
-                        { data_option_index: 1, name: "Families" },
-                        { data_option_index: 2, name: "Honeymooners" },
-                        { data_option_index: 3, name: "Couples"},
-                        { data_option_index: 4, name: "Youth" },
-                        { data_option_index: 5, name: "Solo"},
-                        { data_option_index: 6, name: "Women" },
-                    ]
-                },
-                {
-                    listboxId: "advantage-filter-6",
-                    ulId: "multiple-options-ul-6",
-                    inputId: "multiple-input-6",
-                    dropdownId: "basic-dropdown-6",
-                    toggleId: "btn-toggle-6",
-                    useShortText: false,
-                    list: [
-                        { data_option_index: 0, name: "ANU - V C Bird Intl Airport - Antigua" },
-                        { data_option_index: 1, name: "AUA - Reina Beatrix Intl Airport - Oranjestad" },
-                        { data_option_index: 2, name: "AXA - Wallblake Airport - The Valley" },
-                        { data_option_index: 3, name: "Antigua, Antigua and Barbuda, AG"},
-                        { data_option_index: 4, name: "Argyle International Airport" },
-                        { data_option_index: 5, name: "BGI - Grantley Adams Intl Airport - Bridgetown"},
-                        { data_option_index: 6, name: "Barbados, BB" },
-                        { data_option_index: 7, name: "CUR - Hato Airport - Willemstad" },
-                        { data_option_index: 8, name: "DOM - Melville Hall Airport - Dominica" },
-                        { data_option_index: 9, name: "GND - Point Salines Intl Airport - Point Salines" },
-                        { data_option_index: 10, name: "KIN - Norman Manley Intl Airport - Kingston" },
-                        { data_option_index: 11, name: "MBJ - Sangster Intl Airport - Montego Bay" },
-                        { data_option_index: 12, name: "Montserrat, MS" },
-                        { data_option_index: 13, name: "NAS - Lynden Pindling Intl Airport - Nassau" },
-                        { data_option_index: 14, name: "RDU - Raleigh Durham Intl Airport - Raleigh-Durham" },
-                        { data_option_index: 15, name: "SKB - Robert L Bradshaw Airport - Basse Terre" },
-                        { data_option_index: 16, name: "SLU - George F L Charles Airport - Castries" },
-                        { data_option_index: 17, name: "SVD - E T Joshua Airport - Kingstown" },
-                        { data_option_index: 18, name: "Saint Vincent, VC" },
-                        { data_option_index: 19, name: "Sint Maarten, Islas de Sotavento, SX" },
-                        { data_option_index: 20, name: "Saint Lucia, LC" },
-                        { data_option_index: 21, name: "UVF - Hewanorra Intl Airport - Hewandorra" },
-                        { data_option_index: 22, name: "Anguilla, AI" },
-                    ]
-                },
-
-            ];
-
-            dropdownConfigs.forEach(setupMultiSelectDropdown);
-
-            function setupMultiSelectDropdown({ listboxId, ulId, inputId, dropdownId, toggleId, useShortText, list }) {
-                const ul = document.getElementById(listboxId);
-                if (!ul) return;
-
-                list.forEach(function(item) {
-                    const li = document.createElement("li");
-                    li.setAttribute("aria-selected", "false");
-                    li.setAttribute("aria-current", "false");
-                    li.setAttribute("data-option-index", item.data_option_index);
-                    li.setAttribute("role", "option");
-                    li.className = "dropdown-select-option";
-                    li.textContent = item.name;
-                    ul.appendChild(li);
-                });
-
-                document.querySelectorAll(`#${listboxId} .dropdown-select-option`).forEach(function(option) {
-                    option.addEventListener('click', function() {
-                        const index = option.getAttribute('data-option-index');
-                        const fullText = option.textContent.trim();
-                        const text = useShortText ? getFirstWord(fullText) : fullText;
-
-                        const newItem = document.createElement('li');
-                        newItem.className = 'select-multiple-option';
-                        newItem.innerHTML = `
-                        <span role="button" aria-label="remove element" data-selected-index="${index}" class="select-multiple-remove-btn">×</span>
-                        <div class="filters-multiselect-selected-option">
-                                <p class="filters-multiselect-selected-option__item__text">${text}</p>
-                                </div>
-                `;
-
-                        const inputEl = document.getElementById(inputId);
-                        inputEl.parentNode.insertBefore(newItem, inputEl);
-                        option.classList.add('hidden');
-
-                        newItem.querySelector('.select-multiple-remove-btn').addEventListener('click', function () {
-                            newItem.remove();
-                            document.getElementById(dropdownId).classList.toggle("hidden");
-
-                            const originalOption = document.querySelector(`#${listboxId} [data-option-index="${index}"]`);
-                            if (originalOption) {
-                                originalOption.classList.remove('hidden');
-                            }
-
-                            const count = document.querySelectorAll(`#${ulId} .select-multiple-option`).length;
-                            document.getElementById(inputId).style.width = count === 0 ? "100%" : "5px";
-                        });
-
-                        document.getElementById(inputId).style.width = "5px";
-                        document.getElementById(dropdownId).classList.toggle("hidden");
-                    });
-                });
-
-                const toggleBtn = document.getElementById(toggleId);
-                if (toggleBtn) {
-                    toggleBtn.addEventListener("click", function () {
-                        const count = document.querySelectorAll(`#${ulId} .select-multiple-option`).length;
-                        if (count > 2) return;
-
-                        document.getElementById(dropdownId).classList.toggle("hidden");
-                    });
-                }
-            }
-
-            function getFirstWord(str) {
-                return str.split(/[\s,-]/)[0];
-            }
-        });
 
 
     </script>
