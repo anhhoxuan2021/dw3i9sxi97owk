@@ -182,6 +182,10 @@
         }
 
     .package-card .img-container{
+       /*
+        width:460px;
+        height: 345px;
+       */
         height: 260px;
     }
 
@@ -196,7 +200,7 @@
         height: 100%;
     }
 
-    .img-wrap img {
+    .img-wrap img,.img-wrap  source {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -228,6 +232,32 @@
     }
 
     .hidden {display: none}
+
+    .hero-search {
+        min-height: 410px;
+        background-color: white;
+        position: relative;
+        margin-bottom: 64px;
+    }
+
+    .hero-search__cover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .hero-search__image {
+        display: flex;
+        transform: scale(1.05);
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url('https://pictures.tripbuilder.app/white-labelers/logos/6306c19d3517ecfa1b32f60c622f99b32f5ad0bb-breezetravel-trade-header_4792x3195.jpg');
+    }
     </style>
 </head>
 <body>
@@ -270,15 +300,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fsaint-lucia-10-nights-escape" >
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Saint-Lucia-10-Nights-Escape1.jpg" alt="Antigua Escape" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Saint-Lucia-10-Nights-Escape1.webp" type="image/webp">
+                                    <img src="./image/Saint-Lucia-10-Nights-Escape1.jpg" alt="Antigua Escape" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Lucia 10 Nights Escape</h3>
-                            <p class="package-price">From $1,299</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>A Tropical Paradise Experience</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                    </a>
                 </div>
@@ -288,15 +323,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fjamaica-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/JamaicaWeekendGetaway1.jpg" alt="Bahamas Adventure" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/JamaicaWeekendGetaway1.webp" type="image/webp">
+                                    <img src="./image/JamaicaWeekendGetaway1.jpg" alt="Bahamas Adventure" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Jamaica Weekend Getaway</h3>
-                            <p class="package-price">From $1,599</p>
-                            <p class="package-duration">4 Nights</p>
-                            <p>3 Nights of Rhythm and Relaxation</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -306,15 +346,20 @@
                     <a>
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/AnguillaCulinaryExperience.jpg" alt="Jamaica Retreat" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/AnguillaCulinaryExperience.webp" type="image/webp">
+                                    <img src="./image/AnguillaCulinaryExperience.jpg" alt="Jamaica Retreat" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Anguilla Culinary Experience</h3>
-                            <p class="package-price">From $1,799</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Delight in four days of world-class cuisine, as chefs unite to showcase Anguilla's culinary prowess.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -324,15 +369,19 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fanguilla-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Anguilla-Weekend-Getaway.jpg" alt="St. Lucia Romance" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Anguilla-Weekend-Getaway.webp" type="image/webp">
+                                    <img src="./image/Anguilla-Weekend-Getaway.jpg"  alt="St. Lucia Romance" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Anguilla Weekend Getaway</h3>
-                            <p class="package-price">From $2,199</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Three Nights of Relaxation and Luxury</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -342,15 +391,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdominica-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Dominica10NightsEscape.jpg" alt="Barbados Golf" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Dominica10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/Dominica10NightsEscape.jpg"  alt="Barbados Golf" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Dominica 10 Nights Escape</h3>
-                            <p class="package-price">From $1,899</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>An Adventurous Retreat</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -360,15 +414,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fbarbados-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/BarbadosWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/BarbadosWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/BarbadosWeekendGetaway.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Barbados Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p>3 Nights of Bliss and Adventure</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -378,15 +437,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2F-10-day-escape-raleigh-are-you-ready-for-take-off-">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/10-DayEscape-RaleighAreYouReadyforTake-Off.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/10-DayEscape-RaleighAreYouReadyforTake-Off.webp" type="image/webp">
+                                    <img src="./image/10-DayEscape-RaleighAreYouReadyforTake-Off.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">10-Day Escape - Raleigh! Are You Ready for Take-Off!</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">9 - 14 Days</p>
-                            <p>Starting from Dec. 10, 2023, round-trip airfares to Freeport start as low as $375 per person, and Air + Hotel all-incl.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -396,15 +460,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fanguilla-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Anguilla10NightsEscape.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Anguilla10NightsEscape1.webp" type="image/webp">
+                                    <img src="./image/Anguilla10NightsEscape1.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Anguilla 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>The Ultimate Caribbean Experience</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -414,15 +483,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fsaint-vincent-and-the-grenadines-digital-nomad-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintVincentandtheGrenadinesDigitalNomadEscape.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintVincentandtheGrenadinesDigitalNomadEscape.webp" type="image/webp">
+                                    <img src="./image/SaintVincentandtheGrenadinesDigitalNomadEscape.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Vincent and the Grenadines Digital Nomad Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p>Saint Vincent and the Grenadines</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -432,15 +506,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fantigua-and-barbuda-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/AntiguaandBarbudaWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/AntiguaandBarbudaWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/AntiguaandBarbudaWeekendGetaway.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Antigua and Barbuda Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Three Nights of Tropical Bliss</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -450,15 +529,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/GrenadaWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/GrenadaWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/GrenadaWeekendGetaway.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Grenada Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>3 Nights of Tranquility and Charm</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -468,15 +552,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcuracao-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Curacao10NightsEscape.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Curacao10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/Curacao10NightsEscape.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Curacao 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Ultimate Caribbean Adventure</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -486,15 +575,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fthe-bahamas-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/TheBahamasWeekendGetaway.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/TheBahamasWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/TheBahamasWeekendGetaway.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">The Bahamas Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>3 Nights of Tropical Paradise</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -504,14 +598,19 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2F">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/anguilla-luxury-cultural-tour.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/anguilla-luxury-cultural-tour.webp" type="image/webp">
+                                    <img src="./image/anguilla-luxury-cultural-tour.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Anguilla  Luxury Cultural Tour</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
                             <p></p>
                         </div>
                     </a>
@@ -522,15 +621,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fmontserrat-digital-nomad-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/MontserratDigitalNomadEscape.jpg" alt="Grenada Spice" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/MontserratDigitalNomadEscape.webp" type="image/webp">
+                                    <img src="./image/MontserratDigitalNomadEscape.jpg"  alt="Grenada Spice" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Montserrat Digital Nomad Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 Days</p>
-                            <p>Rediscover tranquility and inspiration in the unspoiled beauty of Montserrat.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -540,15 +644,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-and-nevis-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintKittsandNevisWeekendGetaway.jpg" alt="Saint Kitts and Nevis" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintKittsandNevisWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/SaintKittsandNevisWeekendGetaway.jpg"  alt="Saint Kitts and Nevis" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Kitts and Nevis Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p>3 Nights of Island Charm</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -558,15 +667,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fbarbados-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Barbados10NightsEscape.jpg" alt="Barbados" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Barbados10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/Barbados10NightsEscape.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Barbados 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>Ultimate Caribbean Adventure</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -576,15 +690,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcruising-5-city-road-trip-jamaica-group-tour">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Cruising-5CityRoadTripJamaicaTour.jpg" alt="Jamaica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Cruising-5CityRoadTripJamaicaTour.webp" type="image/webp">
+                                    <img src="./image/Cruising-5CityRoadTripJamaicaTour.jpg"  alt="Jamaica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Cruising- 5 City Road Trip Jamaica Tour!</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">7 - 12 Days</p>
-                            <p>Hit the road in Jamaica. </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -594,15 +713,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-lucian-national-day-festival-of-lights">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintLucianNationalDayFestivalofLights.jpg" alt="Saint Lucian" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintLucianNationalDayFestivalofLights.webp" type="image/webp">
+                                    <img src="./image/SaintLucianNationalDayFestivalofLights.jpg"  alt="Saint Lucian" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Lucian National Day Festival of Lights</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 8 Days</p>
-                            <p>Illuminate Your Spirit at Saint Lucian National Day Festival of Lights.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -612,15 +736,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fsaint-lucia-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintLuciaWeekendGetaway.jpg" alt="Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintLuciaWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/SaintLuciaWeekendGetaway.jpg"  alt="Saint Lucian" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Lucia Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>3 Nights of Romance and Adventure</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -630,33 +759,43 @@
                     <a href="https://ibe.caribbeantravelandtours.com/travel/routes/the-bahamas-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/TheBahamas10NightsEscape.jpg" alt="Jamaica" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/TheBahamas10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/TheBahamas10NightsEscape.jpg"  alt="Jamaica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">The Bahamas 10 Nights Escape!</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">7 - 12 Days</p>
-                            <p>Hit the road in Jamaica. </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Package 22 -->
                 <div class="package-card">
-                    <a href="Anguilla">
+                    <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fanguilla-digital-nomad-escape%3Ffilters-expanded%2Ctrue">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/AnguillaDigitalNomadEscape.jpg" alt="Anguilla" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/AnguillaDigitalNomadEscape.webp" type="image/webp">
+                                    <img src="./image/AnguillaDigitalNomadEscape.jpg"  alt="Anguilla" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Anguilla Digital Nomad Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 Days</p>
-                            <p>Work and unwind in the sophisticated charm of Anguilla's pristine beaches and luxury escapes.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -666,15 +805,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fa-day-in-saint-vincent">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/ADAYINSAINTVINCENT.jpg" alt="VINCENT" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/ADAYINSAINTVINCENT.webp" type="image/webp">
+                                    <img src="./image/ADAYINSAINTVINCENT.jpg"  alt="VINCENT" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">A DAY IN SAINT VINCENT</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p>Spend a casual day exploring the Island in the comfort of air-condition with your own personal driver/guide</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -684,18 +828,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-lucia-carnival-2025">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/StLuciaCarnival2025.jpg" alt="Lucia" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/StLuciaCarnival2025.webp" type="image/webp">
+                                    <img src="./image/StLuciaCarnival2025.jpg"  alt="VINCENT" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">St. Lucia Carnival 2025</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p> A lively festival filled with music, vibrant costumes, and contagious energy.
-
-
-                            </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -705,15 +851,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-music-festival-1">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/StKittsMusicFestival.jpg" alt="Festival" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/StKittsMusicFestival.webp" type="image/webp">
+                                    <img src="./image/StKittsMusicFestival.jpg"  alt="Festival" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">St. Kitts Music Festival</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p>Summer sounds better in St. Kitts, an-unforgettable fusion of music, energy and pure island vibe!</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -723,15 +874,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdominica-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/DominicaWeekendGetaway.jpg" alt="Dominica" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/DominicaWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/DominicaWeekendGetaway.jpg"  alt="Festival" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Dominica Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration"> Days</p>
-                            <p>3 Nights of Nature and Serenity</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -741,15 +897,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-and-nevis-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintKittsandNevis10NightsEscape.jpg" alt="Saint Kitts" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/SaintKittsandNevis10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/SaintKittsandNevis10NightsEscape.jpg"  alt="Saint Kitts" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Saint Kitts and Nevis 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>A Luxurious Island Adventure</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -759,15 +920,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fspecial-offer-jamaica">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/FallIntoJamaicaWhyNot.jpg" alt="Jamaica" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/FallIntoJamaicaWhyNot.webp" type="image/webp">
+                                    <img src="./image/FallIntoJamaicaWhyNot.jpg"  alt="Jamaica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Fall Into Jamaica? Why Not!</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 10 Days</p>
-                            <p>Come into relaxed action in Montego Bay </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -777,15 +943,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcropover-2025">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Cropover2025.jpg" alt="Cropover" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/Cropover2025.webp" type="image/webp">
+                                    <img src="./image/Cropover2025.jpg"  alt="Cropover" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Cropover 2025</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 Days</p>
-                            <p>A vibrant explosion of music, colour and dance</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -795,15 +966,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcuracao-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/CuracaoWeekendGetaway.jpg" alt="Curacao" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/CuracaoWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/CuracaoWeekendGetaway.jpg"  alt="Curacao" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Curacao Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>3 Nights of Sun and Fun</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -813,15 +989,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdominica-cultural-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/DominicaCulturalGetaway.jpg" alt="Dominica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/DominicaCulturalGetaway.webp" type="image/webp">
+                                    <img src="./image/DominicaCulturalGetaway.jpg"  alt="Dominica" class="package-image"
+                                         loading="lazy">
+                                </picture>
+
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Dominica Cultural Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">2 - 8 Days</p>
-                            <p>3 Nights of Heritage and Natural Wonders</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -831,15 +1012,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwhat-are-you-waiting-for-ladera-awaits-you-">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/WhatAreYouWaitingFor-LaderaAwaitsYou.jpg" alt="Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/WhatAreYouWaitingFor-LaderaAwaitsYou.webp" type="image/webp">
+                                    <img src="./image/WhatAreYouWaitingFor-LaderaAwaitsYou.jpg"  alt="Saint Lucia" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">What Are You Waiting For - Ladera Awaits You!</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Ladera Resort - Rust, luxurious, calming</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -849,15 +1035,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fjamaica-sumfest">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/JamaicaSumfest.jpg" alt="Jamaica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/JamaicaSumfest.webp" type="image/webp">
+                                    <img src="./image/JamaicaSumfest.jpg"  alt="Jamaica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Jamaica Sumfest</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Iconic Music Festival with unforgettable performances</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -867,14 +1058,19 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-carriacou-petit-martinique-3-islands-in-one-spicy-destination">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/GrenadaCarriacouPetitMartinique3IslandsinOneSpicyDestination.jpg" alt="Grenada" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/GrenadaCarriacouPetitMartinique3IslandsinOneSpicyDestination.webp" type="image/webp">
+                                    <img src="./image/GrenadaCarriacouPetitMartinique3IslandsinOneSpicyDestination.jpg"  alt="Grenada" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Grenada, Carriacou, Petit Martinique - 3 Islands in One Spicy Destination</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
                             <p></p>
                         </div>
                     </a>
@@ -885,15 +1081,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-vincent-and-the-grenadines-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintVincentandtheGrenadines10NightsEscape.jpg" alt="Saint Vincent " class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintVincentandtheGrenadines10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/SaintVincentandtheGrenadines10NightsEscape.jpg"  alt="Grenada" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Vincent and the Grenadines 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>Ultimate Caribbean Experience</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -903,15 +1104,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fa-visit-to-the-isle-of-spice">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/AVisittoTheIsleofSpice.jpg" alt="grenada" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/AVisittoTheIsleofSpice.webp" type="image/webp">
+                                    <img src="./image/AVisittoTheIsleofSpice.jpg"  alt="Grenada" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">A Visit to The Isle of Spice</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Visit the Tri-Island State of Grenada the Spice of the Caribbean!</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -921,15 +1127,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fvacation-package-in-barbados">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/VillaVacationInBarbadosWestCoast.jpg" alt="Barbados" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/VillaVacationInBarbadosWestCoast.webp" type="image/webp">
+                                    <img src="./image/VillaVacationInBarbadosWestCoast.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Villa Vacation In Barbados (West Coast)</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 10 Days</p>
-                            <p>A special place with many stories... Barbados is home to superstar Rihanna and famous cricketer Garfield Sobers.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -939,15 +1150,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcuracao-north-sea-jazz-festival">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/CuracaoNorthSeaJazzFestivalAug27-Aug302025.jpg" alt="Curacao" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/CuracaoNorthSeaJazzFestivalAug27Aug302025.webp" type="image/webp">
+                                    <img src="./image/CuracaoNorthSeaJazzFestivalAug27Aug302025.jpg"  alt="Curacao" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Curacao North Sea Jazz Festival Aug. 27 - Aug. 30, 2025</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 8 Days</p>
-                            <p>Immerse in the Rhythms at the Curacao North Sea Jazz Festival</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -957,14 +1173,19 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fhoneymoon-in-the-caribbean">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/HoneymooninTheCaribbean.jpg" alt="Sint Maarten" class="package-image">
+
+                                <picture>
+                                    <source srcset="./imagew/HoneymooninTheCaribbean.webp" type="image/webp">
+                                    <img src="./image/HoneymooninTheCaribbean.jpg"  alt="Sint Maarten" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Honeymoon in The Caribbean</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
                             <p></p>
                         </div>
                     </a>
@@ -975,15 +1196,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fadventure-in-the-valley">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/AdventureinTheValley.jpg" alt="Dominica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/AdventureinTheValley.webp" type="image/webp">
+                                    <img src="./image/AdventureinTheValley.jpg"  alt="Sint Maarten" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Adventure in The Valley</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 8 Days</p>
-                            <p>A vacation with nature in Dominica.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -993,15 +1219,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fjamaica-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Jamaica10NightsEscape.jpg" alt="Jamaica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Jamaica10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/Jamaica10NightsEscape.jpg"  alt="Jamaica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Jamaica 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>Ultimate Caribbean Adventure</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1011,15 +1242,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-vincent-and-the-grenadines-weekend-getaway">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintVincentandtheGrenadinesWeekendGetaway.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintVincentandtheGrenadinesWeekendGetaway.webp" type="image/webp">
+                                    <img src="./image/SaintVincentandtheGrenadinesWeekendGetaway.jpg"  alt="Jamaica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Saint Vincent and the Grenadines Weekend Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>3 Nights of Island Serenity</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1029,15 +1265,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Flets-go-to-barbados">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/LetsgotoBarbados.jpg" alt="Barbados" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/LetsgotoBarbados.webp" type="image/webp">
+                                    <img src="./image/LetsgotoBarbados.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Lets go to Barbados</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 8 Days</p>
-                            <p>Have Fun in the bajan sun</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1047,15 +1288,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fcome-to-marleys-jamaica">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/COMETOMARLEYSJAMAICA.jpg" alt="JAMAICA" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/COMETOMARLEYSJAMAICA.webp" type="image/webp">
+                                    <img src="./image/COMETOMARLEYSJAMAICA.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">COME TO MARLEY'S JAMAICA</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Visit the homeland of the legendary Bob Marley</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1065,15 +1311,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2F2023-barbados-beach-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/BarbadosBeachFallGetaway.jpg" alt="Barbados" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/BarbadosBeachFallGetaway.webp" type="image/webp">
+                                    <img src="./image/BarbadosBeachFallGetaway.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Barbados Beach Fall Getaway</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 Days</p>
-                            <p>Sun, Beach, fun, Cruise</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1083,15 +1334,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwinter-thaw-out-windjammer-landings-special-uk-offers">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/WinterThawWindjammerLandings.jpg" alt="Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/WinterThawWindjammerLandings.webp" type="image/webp">
+                                    <img src="./image/WinterThawWindjammerLandings.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Winter Thaw @ Windjammer Landings</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">6 - 12 Days</p>
-                            <p>Winter holiday on the beach. </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1101,16 +1357,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fmass-and-fun-the-vincy-way">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/MassandfuntheVincyWay.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/MassandfuntheVincyWay.webp" type="image/webp">
+                                    <img src="./image/MassandfuntheVincyWay.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Mass and fun the Vincy Way</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 6 Days</p>
-                            <p>
-                                Celebrate Culture, Celebrate Life – Vincy Mas 2025! from sunrise to sunset it's non-stop vibes</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1120,15 +1380,20 @@
                     <a href="https://https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fexperience-dominica">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/ExperienceDominica.jpg" alt="Dominica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/ExperienceDominica.webp" type="image/webp">
+                                    <img src="./image/ExperienceDominica.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Experience Dominica</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 9 Days</p>
-                            <p>"Lose your Cares. Feed Your Soul"</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1138,15 +1403,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fenjoy-variety-living-in-jamaica">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/EnjoyJamaicanLivingNegril.jpg" alt="Jamaica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/EnjoyJamaicanLivingNegril.webp" type="image/webp">
+                                    <img src="./image/EnjoyJamaicanLivingNegril.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Enjoy Jamaican Living (Negril)</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 10 Days</p>
-                            <p>Visit Jamaica - The Bold and the Beautiful</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1156,15 +1426,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fresort-life-amid-the-mangroves">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/ResortLifeAmidtheMangroves.jpg" alt="Curacao" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/ResortLifeAmidtheMangroves.webp" type="image/webp">
+                                    <img src="./image/ResortLifeAmidtheMangroves.jpg"  alt="Curacao" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Resort Life Amid the Mangroves</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration"> Days</p>
-                            <p>Curacao says "Amazing awaits you"!</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1174,15 +1449,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwindjammer-in-the-breeze-code-ebb2023">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/WindjammerintheBreeze.jpg" alt="Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/WindjammerintheBreeze.webp" type="image/webp">
+                                    <img src="./image/WindjammerintheBreeze.jpg"  alt="Curacao" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Windjammer in the Breeze</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 9 Days</p>
-                            <p>A relaxed All Inclusive resort that overlooks the Caribbean Sea from the hilltop. </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1192,15 +1472,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fdoing-nothing-next-week-come-to-barbados-then-">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/DoingnothingnextweekCometoBarbadosthen.jpg" alt="Barbados" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/DoingnothingnextweekCometoBarbadosthen.webp" type="image/webp">
+                                    <img src="./image/DoingnothingnextweekCometoBarbadosthen.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Doing nothing next week?  Come to Barbados then!</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">Days</p>
-                            <p>Do more in Barbados, take a  break for a little fun in the sun</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1210,15 +1495,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fspring-sale-for-the-beach">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/FallfortheBeachinBarbados.jpg" alt="Barbados" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/FallfortheBeachinBarbados.webp" type="image/webp">
+                                    <img src="./image/FallfortheBeachinBarbados.jpg"  alt="Barbados" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Fall for the Beach in Barbados</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 8 Days</p>
-                            <p>Barbados at its best</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1228,15 +1518,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fmy-three-island-vacation">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/MyThreeIslandVacation.jpg" alt="Saint Kitts and Nevis, Dominica, Sint Maarten, Anguilla" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/MyThreeIslandVacation.webp" type="image/webp">
+                                    <img src="./image/MyThreeIslandVacation.jpg"  alt="Dominica" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">My Three Island Vacation</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">10 - 14 Days</p>
-                            <p>Experience Caribbean Charm and beauty</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1246,15 +1541,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-10-nights-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Grenada10NightsEscape.jpg" alt="Grenada" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/Grenada10NightsEscape.webp" type="image/webp">
+                                    <img src="./image/Grenada10NightsEscape.jpg"  alt="Grenada" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Grenada 10 Nights Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 11 Days</p>
-                            <p>Ultimate Caribbean Experience - three unique Islands; one destination</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1264,15 +1564,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fwellness-culinary-combo-in-the-islands">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/WellnessCulinaryIslandHopperAntiguaSaintKittsNevis.jpg" alt="Antigua and Barbuda, Saint Kitts and Nevis" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/WellnessCulinaryIslandHopperAntiguaSaintKittsNevis.webp" type="image/webp">
+                                    <img src="./image/WellnessCulinaryIslandHopperAntiguaSaintKittsNevis.jpg"  alt="Antigua and Barbuda" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Wellness & Culinary Island Hopper - Antigua | Saint Kitts & Nevis</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 15 Days</p>
-                            <p>Two Islands - two themes:  Wellness and Cuisine</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1282,15 +1587,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fparadise-retreat-in-the-grenadines">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/DiscoverSaintVincent.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/DiscoverSaintVincent.webp" type="image/webp">
+                                    <img src="./image/DiscoverSaintVincent.jpg"  alt="Saint Vincent and the Grenadines" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Discover Saint Vincent</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 7 Days</p>
-                            <p>A brief escape to the untouched gem of the Caribbean.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1300,15 +1610,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fromance-in-aruba">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/RomanceinAruba.jpg" alt="Aruba" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/RomanceinAruba.webp" type="image/webp">
+                                    <img src="./image/RomanceinAruba.jpg"  alt="Saint Vincent and the Grenadines" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Romance in Aruba</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">5 - 8 Days</p>
-                            <p>Intimate Adults Only Getaway.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1318,16 +1633,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fescape-to-dominica-st-kitts-on-a-wellness-jaunt">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/DominicaandSaintKittsWellnessEscape.jpg" alt="Dominica, Saint Kitts and Nevis" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/DominicaandSaintKittsWellnessEscape.webp" type="image/webp">
+                                    <img src="./image/DominicaandSaintKittsWellnessEscape.jpg"  alt="Dominica, Saint Kitts " class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Dominica and Saint Kitts Wellness Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">4 - 15 Days</p>
-                            <p>Put Wellness first and enjoy nature at its best.  Spend time in an artist's haven in the rainforest.</p>
-                        </div>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p> </div>
                     </a>
                 </div>
 
@@ -1336,15 +1655,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fst-kitts-and-nevis-escape-to-wellbeing">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/SaintKittsandNevisWellnessEscape.jpg" alt="Saint Kitts and Nevis, Dominica" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/SaintKittsandNevisWellnessEscape.webp" type="image/webp">
+                                    <img src="./image/SaintKittsandNevisWellnessEscape.jpg"  alt="Dominica, Saint Kitts " class="package-image"
+                                         loading="lazy">
+                                </picture>
+
                             </div>
                         </div>
 
                         <div class="package-info">
                             <h3 class="package-title">Saint Kitts and Nevis Wellness Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 12 Days</p>
-                            <p>Wellness Escape in St. Kitts and Nevis.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1354,15 +1678,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Frum-and-dine-vincy-style">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/Rum&FoodtheVincyWay.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/RumFoodtheVincyWay.webp" type="image/webp">
+                                    <img src="./image/RumFoodtheVincyWay.jpg"  alt="Saint Vincent and the Grenadines" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Rum & Food the Vincy Way</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 10 Days</p>
-                            <p>Real Rum and Vincy Food</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1372,15 +1701,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fparadise-tours">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/ParadiseTours.jpg" alt="Saint Lucia, Saint Kitts and Nevis, Anguilla" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/ParadiseTours.webp" type="image/webp">
+                                    <img src="./image/ParadiseTours.jpg" alt="Saint Lucia, Saint Kitts and Nevis, Anguilla" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Paradise Tours</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">Days</p>
-                            <p>Three Islands, one Amazing vacation</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1390,15 +1724,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Ftrial-antigua-and-st-lucia-culinary-escape-1">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/AntiguaandSaintLuciaCulinaryEscape.jpg" alt="Antigua and Barbuda, Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/AntiguaandSaintLuciaCulinaryEscape.webp" type="image/webp">
+                                    <img src="./image/AntiguaandSaintLuciaCulinaryEscape.jpg" alt="Antigua and Barbuda, Saint Lucia" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Antigua and Saint Lucia Culinary Escape</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 12 Days</p>
-                            <p>Explore and experience the culinary delights of Antigua and St. Lucia.</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1408,15 +1747,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fvacation-package-to-st-lucia">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/ThreeIslandsUnveiledStLuciaSintMaartenAnguilla.jpg" alt="Saint Lucia, Sint Maarten, Anguilla, United Kingdom" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/ThreeIslandsUnveiledStLuciaSintMaartenAnguilla.webp" type="image/webp">
+                                    <img src="./image/ThreeIslandsUnveiledStLuciaSintMaartenAnguilla.jpg" alt="Saint Lucia, Sint Maarten, Anguilla, United Kingdom" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Three Islands Unveiled: St. Lucia / Sint Maarten / Anguilla</h3>
-                            <p class="package-price">From $830</p>
-                            <p class="package-duration">1 - 21 Days</p>
-                            <p>Discover paradise not once but three times - St. Lucia / Sint Maarten / Anguilla</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1426,15 +1770,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-st-lucia-culinary-delight">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/GrenadaandStLuciaCulinaryEscape.jpg" alt="Grenada, Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/GrenadaandStLuciaCulinaryEscape.webp" type="image/webp">
+                                    <img src="./image/GrenadaandStLuciaCulinaryEscape.jpg" alt="Grenada, Saint Lucia" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
-                            <h3 class="package-title">Grenada and St. Lucia Culinary Escape             </h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">2 - 16 Days</p>
-                            <p>Explore the culinary delights of two unique islands in one vacation! </p>
+                            <h3 class="package-title">Grenada and St. Lucia Culinary Escape</h3>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1444,15 +1793,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fgrenada-antigua-culinary-escape">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/GrenadaandAntiguaCulinaryEscape.jpg" alt="Grenada, Antigua and Barbuda" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/GrenadaandAntiguaCulinaryEscape.webp" type="image/webp">
+                                    <img src="./image/GrenadaandAntiguaCulinaryEscape.jpg" alt="Grenada, Antigua and Barbuda" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Grenada and Antigua Culinary Escape       </h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 15 Days</p>
-                            <p>Culinary Escape to the Eastern Caribbean!</p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1462,15 +1816,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fexplore-saint-vincent-the-grenadines">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/ExploreSaintVincentTheGrenadines.jpg" alt="Saint Vincent and the Grenadines" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/ExploreSaintVincentTheGrenadines.webp" type="image/webp">
+                                    <img src="./image/ExploreSaintVincentTheGrenadines.jpg" alt="Saint Vincent and the Grenadines" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Explore Saint Vincent & The Grenadines</h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">3 - 15 Days</p>
-                            <p>Multi-Destination vacation in a single archipelago, that is Saint Vincent & The  Grenadines.  </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1480,15 +1839,20 @@
                     <a href="https://caribbeantravelandtours.com/ibe?nz-url=%2Ftravel%2Froutes%2Fultimate-twin-island-adventure-saint-vincent-saint-lucia">
                         <div class="img-container">
                             <div class="img-wrap">
-                                <img src="./image/UltimateTwinIslandAdventureSaintVincentSaintLucia.jpg" alt="Saint Vincent and the Grenadines, Saint Lucia" class="package-image">
+                                <picture>
+                                    <source srcset="./imagew/UltimateTwinIslandAdventureSaintVincentSaintLucia.webp" type="image/webp">
+                                    <img src="./image/UltimateTwinIslandAdventureSaintVincentSaintLucia.jpg" alt="Saint Vincent and the Grenadines" class="package-image"
+                                         loading="lazy">
+                                </picture>
                             </div>
                         </div>
 
+
                         <div class="package-info">
                             <h3 class="package-title">Ultimate Twin Island Adventure - Saint Vincent & Saint Lucia </h3>
-                            <p class="package-price">From $1,499</p>
-                            <p class="package-duration">Days</p>
-                            <p>Island hop between two islands with peaks in common </p>
+                            <p class="package-price"></p>
+                            <p class="package-duration"></p>
+                            <p></p>
                         </div>
                     </a>
                 </div>
@@ -1500,7 +1864,7 @@
             <h2>Explore Caribbean Destinations</h2>
             <div class="destinations-grid">
                 <div class="destination-category">
-                    <h3 class="category-title">Popular Islands</h3>
+                    <h3 class="category-title">Caribbean</h3>
                     <ul class="destination-list">
                         <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/overview-15">Overview</a></li>
                         <li><a href="https://caribbeantravelandtours.com/travel/islands/caribbean/top-towns-9">Top Towns</a></li>
@@ -1517,47 +1881,55 @@
                 </div>
 
                 <div class="destination-category">
-                    <h3 class="category-title">Luxury Resorts</h3>
+                    <h3 class="category-title">Bahamas</h3>
                     <ul class="destination-list">
-                        <li><a href="#">Sandals Resorts</a></li>
-                        <li><a href="#">Beaches Resorts</a></li>
-                        <li><a href="#">Four Seasons</a></li>
-                        <li><a href="#">Ritz-Carlton</a></li>
-                        <li><a href="#">Aman Resorts</a></li>
-                        <li><a href="#">Rosewood Hotels</a></li>
-                        <li><a href="#">Belmond</a></li>
-                        <li><a href="#">Elegant Hotels</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/overview-11">Overview</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/top-towns-bahamas">Top Towns in The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/best-time-travel-bahamas">Best Time to Travel to The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/visa-bahamas">Visa to The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/before-you-travel-6">Before You Travel</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/weather-7">Weather</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/travel-tips-and-advice-travelling-bahamas">Travel Tips and Advice for Travelling to The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/things-see-bahamas">Things to See in The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/places-visit-bahamas">Places to Visit in The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/things-do-bahamas">Things to do in The Bahamas</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/bahamas/what-eat-bahamas-food">What to Eat (the Bahamas Food)</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="destination-category">
+                    <h3 class="category-title">Jamaica</h3>
+                    <ul class="destination-list">
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/overview-7">Overview</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/top-jamaica-towns">Top Jamaica Towns</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/best-time-travel-jamaica">Best Time to Travel to Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/visa-jamaica">Visa to Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/before-you-travel-4">Before You Travel</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/weather-jamaica">Weather in Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/travel-tips-and-advice-travelling-jamaica">Travel Tips and Advice for Travelling to Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/things-see-jamaica">Things to See in Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/places-visit-jamaica">Places to Visit in Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/things-do-jamaica">Things to do in Jamaica</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/jamaica/what-eat-jamaica-jamaican-food">What to Eat in Jamaica (Jamaican Food)</a></li>
 
                     </ul>
                 </div>
 
                 <div class="destination-category">
-                    <h3 class="category-title">Adventure Travel</h3>
+                    <h3 class="category-title">Aruba</h3>
                     <ul class="destination-list">
-                        <li><a href="#">Scuba Diving</a></li>
-                        <li><a href="#">Deep Sea Fishing</a></li>
-                        <li><a href="#">Rainforest Hiking</a></li>
-                        <li><a href="#">Volcano Tours</a></li>
-                        <li><a href="#">Sailing Charters</a></li>
-                        <li><a href="#">Whale Watching</a></li>
-                        <li><a href="#">Ziplining</a></li>
-                        <li><a href="#">Cave Exploration</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="destination-category">
-                    <h3 class="category-title">Cruise Destinations</h3>
-                    <ul class="destination-list">
-                        <li><a href="#">Eastern Caribbean</a></li>
-                        <li><a href="#">Western Caribbean</a></li>
-                        <li><a href="#">Southern Caribbean</a></li>
-                        <li><a href="#">Bahamas Cruises</a></li>
-                        <li><a href="#">Private Yacht Charters</a></li>
-                        <li><a href="#">Luxury Cruises</a></li>
-                        <li><a href="#">Family Cruises</a></li>
-                        <li><a href="#">Adventure Cruises</a></li>
-
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/overview-aruba">Overview – Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/top-aruba-towns">Top Aruba Towns</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/best-time-travel-aruba">Best Time to Travel to Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/visa-aruba">VISA to Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/you-travel-2">Before You Travel</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/aruba-weather">Aruba Weather</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/travel-tips-advice-travelling-aruba">Travel Tips &amp; Advice for Travelling to Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/things-see-aruba">Things to See in Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/places-visit-aruba">Places to Visit in Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/things-do-aruba">Things to Do in Aruba</a></li>
+                        <li><a href="https://caribbeantravelandtours.com/travel/islands/aruba/what-eat-aruba-aruba-food">What to Eat in Aruba (Aruba Food)</a></li>
                     </ul>
                 </div>
             </div>
