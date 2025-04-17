@@ -282,17 +282,20 @@
     <main>
         <section class="packages-container">
             <div class="center-div">
-                <button class="built-own-trip fw-bold" onclick="openTab(event)">BUILD MY OWN TRIP</button>
+                <button class="built-own-trip fw-bold" id="loadIframeBtn" type="button">BUILD MY OWN TRIP</button>
             </div>
-            <div id="tab1" class="tab1 hidden" >
-                <iframe
-                        src="https://ibe.caribbeantravelandtours.com/travel/create-itinerary"
-                        width="100%"
-                        height="800"
-                        frameborder="0"
-                        style="border: none;">
-                </iframe>
+            <div id="tab1" class="tab1" >
+                <!--<iframe-->
+                        <!--src="https://ibe.caribbeantravelandtours.com/travel/create-itinerary"-->
+                        <!--width="100%"-->
+                        <!--height="800"-->
+                        <!--frameborder="0"-->
+                        <!--loading="lazy"-->
+                        <!--style="border: none;">-->
+                <!--</iframe>-->
+
             </div>
+            <div id="iframeContainer"></div>
         </section>
 
         <section class="packages-container">
@@ -1971,34 +1974,16 @@
     </footer>
 
     <script>
-        function openFrame(evt, tabName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        function openTab(evt){
-            document.getElementById("tab1").classList.toggle("hidden");
-
-        }
-
-
-
+        document.getElementById('loadIframeBtn').addEventListener('click', function () {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://ibe.caribbeantravelandtours.com/travel/create-itinerary';
+            iframe.width = '100%';
+            iframe.height = '800';
+            iframe.frameBorder = '0';
+            iframe.loading = 'lazy';
+            iframe.style.border = 'none';
+            document.getElementById('iframeContainer').appendChild(iframe);
+        });
 
     </script>
 
